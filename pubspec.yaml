@@ -2,6 +2,9 @@ name: data
 description: "A new Flutter package project."
 version: 0.0.1
 homepage:
+repository: https://github.com/CodeHiSmile/data
+issue_tracker: https://github.com/CodeHiSmile/data/issues
+documentation: https://github.com/CodeHiSmile/data
 
 environment:
   sdk: ^3.10.0

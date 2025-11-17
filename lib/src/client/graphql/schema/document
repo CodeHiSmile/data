@@ -1,0 +1,2 @@
+Tạo file schema.graphql
+Khi làm việc với graphQL, BE sẽ cung cấp cho APP file này, chỉ cần cope và dán vào đây, sau đó chạy lệnh build_run là được.

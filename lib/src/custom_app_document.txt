@@ -1,0 +1,6 @@
+Hướng dẫn sử dụng cho RestAPI:
+B1: Copy và mở comment tất cả các file trong thư mục lib/data/client/rest_api_sample.
+    Mặc kệ các file bị đỏ vì lỗi thiếu object. Thực hiện tiếp bước 2 và 3 sẽ hết lỗi.
+B2: Copy và mở comment trong thư mục: lib/data/remote.
+    Chỉnh sửa đường dẫn để lấy về refreshToken và map lại theo model của app.
+B3: Mở comment trong thư mục: lib/data/middleware/refresh_token_interceptor.dart

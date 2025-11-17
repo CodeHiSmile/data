@@ -61,13 +61,13 @@ Map<String, dynamic> _$DataListResponseToJson<T>(
 };
 
 _Meta _$MetaFromJson(Map<String, dynamic> json) => _Meta(
-  pageInfo: json['page_info'] == null
+  pageInfo: json['pageInfo'] == null
       ? null
-      : PageInfo.fromJson(json['page_info'] as Map<String, dynamic>),
+      : PageInfo.fromJson(json['pageInfo'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$MetaToJson(_Meta instance) => <String, dynamic>{
-  'page_info': instance.pageInfo,
+  'pageInfo': instance.pageInfo,
 };
 
 _PageInfo _$PageInfoFromJson(Map<String, dynamic> json) =>

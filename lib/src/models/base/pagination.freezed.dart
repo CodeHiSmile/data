@@ -22,7 +22,7 @@ Pagination<T> _$PaginationFromJson<T>(
 /// @nodoc
 mixin _$Pagination<T> {
 
-@JsonKey(name: 'pageNumber') int? get pageNumber;@JsonKey(name: 'pageSize') int? get pageSize;@JsonKey(name: 'totalElements') int? get totalElements;@JsonKey(name: 'content') List<T>? get content;
+ int? get pageNumber; int? get pageSize; int? get totalElements; List<T>? get content;
 /// Create a copy of Pagination
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -55,7 +55,7 @@ abstract mixin class $PaginationCopyWith<T,$Res>  {
   factory $PaginationCopyWith(Pagination<T> value, $Res Function(Pagination<T>) _then) = _$PaginationCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: 'pageNumber') int? pageNumber,@JsonKey(name: 'pageSize') int? pageSize,@JsonKey(name: 'totalElements') int? totalElements,@JsonKey(name: 'content') List<T>? content
+ int? pageNumber, int? pageSize, int? totalElements, List<T>? content
 });
 
 
@@ -163,7 +163,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'pageNumber')  int? pageNumber, @JsonKey(name: 'pageSize')  int? pageSize, @JsonKey(name: 'totalElements')  int? totalElements, @JsonKey(name: 'content')  List<T>? content)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? pageNumber,  int? pageSize,  int? totalElements,  List<T>? content)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _BaseData() when $default != null:
 return $default(_that.pageNumber,_that.pageSize,_that.totalElements,_that.content);case _:
@@ -184,7 +184,7 @@ return $default(_that.pageNumber,_that.pageSize,_that.totalElements,_that.conten
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'pageNumber')  int? pageNumber, @JsonKey(name: 'pageSize')  int? pageSize, @JsonKey(name: 'totalElements')  int? totalElements, @JsonKey(name: 'content')  List<T>? content)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? pageNumber,  int? pageSize,  int? totalElements,  List<T>? content)  $default,) {final _that = this;
 switch (_that) {
 case _BaseData():
 return $default(_that.pageNumber,_that.pageSize,_that.totalElements,_that.content);case _:
@@ -204,7 +204,7 @@ return $default(_that.pageNumber,_that.pageSize,_that.totalElements,_that.conten
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'pageNumber')  int? pageNumber, @JsonKey(name: 'pageSize')  int? pageSize, @JsonKey(name: 'totalElements')  int? totalElements, @JsonKey(name: 'content')  List<T>? content)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? pageNumber,  int? pageSize,  int? totalElements,  List<T>? content)?  $default,) {final _that = this;
 switch (_that) {
 case _BaseData() when $default != null:
 return $default(_that.pageNumber,_that.pageSize,_that.totalElements,_that.content);case _:
@@ -219,14 +219,14 @@ return $default(_that.pageNumber,_that.pageSize,_that.totalElements,_that.conten
 @JsonSerializable(genericArgumentFactories: true)
 
 class _BaseData<T> implements Pagination<T> {
-  const _BaseData({@JsonKey(name: 'pageNumber') this.pageNumber, @JsonKey(name: 'pageSize') this.pageSize, @JsonKey(name: 'totalElements') this.totalElements, @JsonKey(name: 'content') final  List<T>? content}): _content = content;
+  const _BaseData({this.pageNumber, this.pageSize, this.totalElements, final  List<T>? content}): _content = content;
   factory _BaseData.fromJson(Map<String, dynamic> json,T Function(Object?) fromJsonT) => _$BaseDataFromJson(json,fromJsonT);
 
-@override@JsonKey(name: 'pageNumber') final  int? pageNumber;
-@override@JsonKey(name: 'pageSize') final  int? pageSize;
-@override@JsonKey(name: 'totalElements') final  int? totalElements;
+@override final  int? pageNumber;
+@override final  int? pageSize;
+@override final  int? totalElements;
  final  List<T>? _content;
-@override@JsonKey(name: 'content') List<T>? get content {
+@override List<T>? get content {
   final value = _content;
   if (value == null) return null;
   if (_content is EqualUnmodifiableListView) return _content;
@@ -268,7 +268,7 @@ abstract mixin class _$BaseDataCopyWith<T,$Res> implements $PaginationCopyWith<T
   factory _$BaseDataCopyWith(_BaseData<T> value, $Res Function(_BaseData<T>) _then) = __$BaseDataCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: 'pageNumber') int? pageNumber,@JsonKey(name: 'pageSize') int? pageSize,@JsonKey(name: 'totalElements') int? totalElements,@JsonKey(name: 'content') List<T>? content
+ int? pageNumber, int? pageSize, int? totalElements, List<T>? content
 });
 
 

@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$DataResponse<T> implements DiagnosticableTreeMixin {
 
-@JsonKey(name: 'status') StatusResponse? get status;@JsonKey(name: 'data') T? get data;@JsonKey(name: 'meta') Meta? get meta;
+ StatusResponse? get status; T? get data; Meta? get meta;
 /// Create a copy of DataResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -54,7 +54,7 @@ abstract mixin class $DataResponseCopyWith<T,$Res>  {
   factory $DataResponseCopyWith(DataResponse<T> value, $Res Function(DataResponse<T>) _then) = _$DataResponseCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: 'status') StatusResponse? status,@JsonKey(name: 'data') T? data,@JsonKey(name: 'meta') Meta? meta
+ StatusResponse? status, T? data, Meta? meta
 });
 
 
@@ -185,7 +185,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'status')  StatusResponse? status, @JsonKey(name: 'data')  T? data, @JsonKey(name: 'meta')  Meta? meta)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( StatusResponse? status,  T? data,  Meta? meta)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _DataResponse() when $default != null:
 return $default(_that.status,_that.data,_that.meta);case _:
@@ -206,7 +206,7 @@ return $default(_that.status,_that.data,_that.meta);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'status')  StatusResponse? status, @JsonKey(name: 'data')  T? data, @JsonKey(name: 'meta')  Meta? meta)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( StatusResponse? status,  T? data,  Meta? meta)  $default,) {final _that = this;
 switch (_that) {
 case _DataResponse():
 return $default(_that.status,_that.data,_that.meta);case _:
@@ -226,7 +226,7 @@ return $default(_that.status,_that.data,_that.meta);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'status')  StatusResponse? status, @JsonKey(name: 'data')  T? data, @JsonKey(name: 'meta')  Meta? meta)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( StatusResponse? status,  T? data,  Meta? meta)?  $default,) {final _that = this;
 switch (_that) {
 case _DataResponse() when $default != null:
 return $default(_that.status,_that.data,_that.meta);case _:
@@ -241,12 +241,12 @@ return $default(_that.status,_that.data,_that.meta);case _:
 @JsonSerializable(genericArgumentFactories: true)
 
 class _DataResponse<T> with DiagnosticableTreeMixin implements DataResponse<T> {
-  const _DataResponse({@JsonKey(name: 'status') this.status, @JsonKey(name: 'data') this.data, @JsonKey(name: 'meta') this.meta});
+  const _DataResponse({this.status, this.data, this.meta});
   factory _DataResponse.fromJson(Map<String, dynamic> json,T Function(Object?) fromJsonT) => _$DataResponseFromJson(json,fromJsonT);
 
-@override@JsonKey(name: 'status') final  StatusResponse? status;
-@override@JsonKey(name: 'data') final  T? data;
-@override@JsonKey(name: 'meta') final  Meta? meta;
+@override final  StatusResponse? status;
+@override final  T? data;
+@override final  Meta? meta;
 
 /// Create a copy of DataResponse
 /// with the given fields replaced by the non-null parameter values.
@@ -287,7 +287,7 @@ abstract mixin class _$DataResponseCopyWith<T,$Res> implements $DataResponseCopy
   factory _$DataResponseCopyWith(_DataResponse<T> value, $Res Function(_DataResponse<T>) _then) = __$DataResponseCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: 'status') StatusResponse? status,@JsonKey(name: 'data') T? data,@JsonKey(name: 'meta') Meta? meta
+ StatusResponse? status, T? data, Meta? meta
 });
 
 
@@ -344,7 +344,7 @@ $MetaCopyWith<$Res>? get meta {
 /// @nodoc
 mixin _$DataListResponse<T> implements DiagnosticableTreeMixin {
 
-@JsonKey(name: 'status') StatusResponse? get status;@JsonKey(name: 'data') List<T>? get data;@JsonKey(name: 'meta') Meta? get meta;
+ StatusResponse? get status; List<T>? get data; Meta? get meta;
 /// Create a copy of DataListResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -383,7 +383,7 @@ abstract mixin class $DataListResponseCopyWith<T,$Res>  {
   factory $DataListResponseCopyWith(DataListResponse<T> value, $Res Function(DataListResponse<T>) _then) = _$DataListResponseCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: 'status') StatusResponse? status,@JsonKey(name: 'data') List<T>? data,@JsonKey(name: 'meta') Meta? meta
+ StatusResponse? status, List<T>? data, Meta? meta
 });
 
 
@@ -514,7 +514,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'status')  StatusResponse? status, @JsonKey(name: 'data')  List<T>? data, @JsonKey(name: 'meta')  Meta? meta)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( StatusResponse? status,  List<T>? data,  Meta? meta)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _DataListResponse() when $default != null:
 return $default(_that.status,_that.data,_that.meta);case _:
@@ -535,7 +535,7 @@ return $default(_that.status,_that.data,_that.meta);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'status')  StatusResponse? status, @JsonKey(name: 'data')  List<T>? data, @JsonKey(name: 'meta')  Meta? meta)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( StatusResponse? status,  List<T>? data,  Meta? meta)  $default,) {final _that = this;
 switch (_that) {
 case _DataListResponse():
 return $default(_that.status,_that.data,_that.meta);case _:
@@ -555,7 +555,7 @@ return $default(_that.status,_that.data,_that.meta);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'status')  StatusResponse? status, @JsonKey(name: 'data')  List<T>? data, @JsonKey(name: 'meta')  Meta? meta)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( StatusResponse? status,  List<T>? data,  Meta? meta)?  $default,) {final _that = this;
 switch (_that) {
 case _DataListResponse() when $default != null:
 return $default(_that.status,_that.data,_that.meta);case _:
@@ -570,12 +570,12 @@ return $default(_that.status,_that.data,_that.meta);case _:
 @JsonSerializable(genericArgumentFactories: true)
 
 class _DataListResponse<T> with DiagnosticableTreeMixin implements DataListResponse<T> {
-  const _DataListResponse({@JsonKey(name: 'status') this.status, @JsonKey(name: 'data') final  List<T>? data, @JsonKey(name: 'meta') this.meta}): _data = data;
+  const _DataListResponse({this.status, final  List<T>? data, this.meta}): _data = data;
   factory _DataListResponse.fromJson(Map<String, dynamic> json,T Function(Object?) fromJsonT) => _$DataListResponseFromJson(json,fromJsonT);
 
-@override@JsonKey(name: 'status') final  StatusResponse? status;
+@override final  StatusResponse? status;
  final  List<T>? _data;
-@override@JsonKey(name: 'data') List<T>? get data {
+@override List<T>? get data {
   final value = _data;
   if (value == null) return null;
   if (_data is EqualUnmodifiableListView) return _data;
@@ -583,7 +583,7 @@ class _DataListResponse<T> with DiagnosticableTreeMixin implements DataListRespo
   return EqualUnmodifiableListView(value);
 }
 
-@override@JsonKey(name: 'meta') final  Meta? meta;
+@override final  Meta? meta;
 
 /// Create a copy of DataListResponse
 /// with the given fields replaced by the non-null parameter values.
@@ -624,7 +624,7 @@ abstract mixin class _$DataListResponseCopyWith<T,$Res> implements $DataListResp
   factory _$DataListResponseCopyWith(_DataListResponse<T> value, $Res Function(_DataListResponse<T>) _then) = __$DataListResponseCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: 'status') StatusResponse? status,@JsonKey(name: 'data') List<T>? data,@JsonKey(name: 'meta') Meta? meta
+ StatusResponse? status, List<T>? data, Meta? meta
 });
 
 
@@ -681,7 +681,7 @@ $MetaCopyWith<$Res>? get meta {
 /// @nodoc
 mixin _$Meta implements DiagnosticableTreeMixin {
 
-@JsonKey(name: 'page_info') PageInfo? get pageInfo;
+ PageInfo? get pageInfo;
 /// Create a copy of Meta
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -720,7 +720,7 @@ abstract mixin class $MetaCopyWith<$Res>  {
   factory $MetaCopyWith(Meta value, $Res Function(Meta) _then) = _$MetaCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: 'page_info') PageInfo? pageInfo
+ PageInfo? pageInfo
 });
 
 
@@ -837,7 +837,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'page_info')  PageInfo? pageInfo)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( PageInfo? pageInfo)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Meta() when $default != null:
 return $default(_that.pageInfo);case _:
@@ -858,7 +858,7 @@ return $default(_that.pageInfo);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'page_info')  PageInfo? pageInfo)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( PageInfo? pageInfo)  $default,) {final _that = this;
 switch (_that) {
 case _Meta():
 return $default(_that.pageInfo);case _:
@@ -878,7 +878,7 @@ return $default(_that.pageInfo);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'page_info')  PageInfo? pageInfo)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( PageInfo? pageInfo)?  $default,) {final _that = this;
 switch (_that) {
 case _Meta() when $default != null:
 return $default(_that.pageInfo);case _:
@@ -893,10 +893,10 @@ return $default(_that.pageInfo);case _:
 @JsonSerializable()
 
 class _Meta with DiagnosticableTreeMixin implements Meta {
-   _Meta({@JsonKey(name: 'page_info') this.pageInfo});
+   _Meta({this.pageInfo});
   factory _Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
 
-@override@JsonKey(name: 'page_info') final  PageInfo? pageInfo;
+@override final  PageInfo? pageInfo;
 
 /// Create a copy of Meta
 /// with the given fields replaced by the non-null parameter values.
@@ -937,7 +937,7 @@ abstract mixin class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
   factory _$MetaCopyWith(_Meta value, $Res Function(_Meta) _then) = __$MetaCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: 'page_info') PageInfo? pageInfo
+ PageInfo? pageInfo
 });
 
 
@@ -980,7 +980,7 @@ $PageInfoCopyWith<$Res>? get pageInfo {
 /// @nodoc
 mixin _$PageInfo implements DiagnosticableTreeMixin {
 
-@JsonKey(name: 'next') int? get next;
+ int? get next;
 /// Create a copy of PageInfo
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1019,7 +1019,7 @@ abstract mixin class $PageInfoCopyWith<$Res>  {
   factory $PageInfoCopyWith(PageInfo value, $Res Function(PageInfo) _then) = _$PageInfoCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: 'next') int? next
+ int? next
 });
 
 
@@ -1124,7 +1124,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'next')  int? next)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? next)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _PageInfo() when $default != null:
 return $default(_that.next);case _:
@@ -1145,7 +1145,7 @@ return $default(_that.next);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'next')  int? next)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? next)  $default,) {final _that = this;
 switch (_that) {
 case _PageInfo():
 return $default(_that.next);case _:
@@ -1165,7 +1165,7 @@ return $default(_that.next);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'next')  int? next)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? next)?  $default,) {final _that = this;
 switch (_that) {
 case _PageInfo() when $default != null:
 return $default(_that.next);case _:
@@ -1180,10 +1180,10 @@ return $default(_that.next);case _:
 @JsonSerializable()
 
 class _PageInfo with DiagnosticableTreeMixin implements PageInfo {
-   _PageInfo({@JsonKey(name: 'next') this.next});
+   _PageInfo({this.next});
   factory _PageInfo.fromJson(Map<String, dynamic> json) => _$PageInfoFromJson(json);
 
-@override@JsonKey(name: 'next') final  int? next;
+@override final  int? next;
 
 /// Create a copy of PageInfo
 /// with the given fields replaced by the non-null parameter values.
@@ -1224,7 +1224,7 @@ abstract mixin class _$PageInfoCopyWith<$Res> implements $PageInfoCopyWith<$Res>
   factory _$PageInfoCopyWith(_PageInfo value, $Res Function(_PageInfo) _then) = __$PageInfoCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: 'next') int? next
+ int? next
 });
 
 

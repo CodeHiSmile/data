@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ResultsListResponse<T> {
 
-@JsonKey(name: 'results') List<T>? get results;
+ List<T>? get results;
 /// Create a copy of ResultsListResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $ResultsListResponseCopyWith<T,$Res>  {
   factory $ResultsListResponseCopyWith(ResultsListResponse<T> value, $Res Function(ResultsListResponse<T>) _then) = _$ResultsListResponseCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: 'results') List<T>? results
+ List<T>? results
 });
 
 
@@ -153,7 +153,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'results')  List<T>? results)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<T>? results)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ResultsListResponse() when $default != null:
 return $default(_that.results);case _:
@@ -174,7 +174,7 @@ return $default(_that.results);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'results')  List<T>? results)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<T>? results)  $default,) {final _that = this;
 switch (_that) {
 case _ResultsListResponse():
 return $default(_that.results);case _:
@@ -194,7 +194,7 @@ return $default(_that.results);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'results')  List<T>? results)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<T>? results)?  $default,) {final _that = this;
 switch (_that) {
 case _ResultsListResponse() when $default != null:
 return $default(_that.results);case _:
@@ -209,11 +209,11 @@ return $default(_that.results);case _:
 @JsonSerializable(genericArgumentFactories: true)
 
 class _ResultsListResponse<T> implements ResultsListResponse<T> {
-  const _ResultsListResponse({@JsonKey(name: 'results') final  List<T>? results}): _results = results;
+  const _ResultsListResponse({final  List<T>? results}): _results = results;
   factory _ResultsListResponse.fromJson(Map<String, dynamic> json,T Function(Object?) fromJsonT) => _$ResultsListResponseFromJson(json,fromJsonT);
 
  final  List<T>? _results;
-@override@JsonKey(name: 'results') List<T>? get results {
+@override List<T>? get results {
   final value = _results;
   if (value == null) return null;
   if (_results is EqualUnmodifiableListView) return _results;
@@ -255,7 +255,7 @@ abstract mixin class _$ResultsListResponseCopyWith<T,$Res> implements $ResultsLi
   factory _$ResultsListResponseCopyWith(_ResultsListResponse<T> value, $Res Function(_ResultsListResponse<T>) _then) = __$ResultsListResponseCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: 'results') List<T>? results
+ List<T>? results
 });
 
 

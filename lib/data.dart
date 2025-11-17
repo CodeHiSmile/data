@@ -9,15 +9,6 @@ export 'src/client/base/rest_api_client.dart';
 // Client GraphQL utilities
 export 'src/client/graphql/utils/document_node_ex.dart';
 
-// Client GraphQL sample
-export 'src/client/graphql_sample/auth_app_server_grapql_client.dart';
-export 'src/client/graphql_sample/none_auth_app_server_graphql_client.dart';
-
-// Client REST API sample
-export 'src/client/rest_api_sample/auth_app_server_api_client.dart';
-export 'src/client/rest_api_sample/none_auth_app_server_api_client.dart';
-export 'src/client/rest_api_sample/refresh_token_api_client.dart';
-
 // Mapper base
 export 'src/mapper/base/base_error_response_mapper.dart';
 export 'src/mapper/base/base_success_response_mapper.dart';
@@ -30,6 +21,9 @@ export 'src/mapper/base/base_success_response_mapper/data_json_object_reponse_ma
 export 'src/mapper/base/base_success_response_mapper/json_array_response_mapper.dart';
 export 'src/mapper/base/base_success_response_mapper/json_object_reponse_mapper.dart';
 export 'src/mapper/base/base_success_response_mapper/results_json_array_response_mapper.dart';
+
+//config
+export 'src/config/data_config.dart';
 
 // Mapper utilities
 export 'src/mapper/base_data_mapper.dart';

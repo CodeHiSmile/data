@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$RecordsListResponse<T> {
 
-@JsonKey(name: 'records') List<T>? get records;@JsonKey(name: 'page') int? get page;@JsonKey(name: 'offset') int? get offset;@JsonKey(name: 'total') int? get total;@JsonKey(name: 'next') int? get next;@JsonKey(name: 'prev') int? get prev;
+ List<T>? get records; int? get page; int? get offset; int? get total; int? get next; int? get prev;
 /// Create a copy of RecordsListResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $RecordsListResponseCopyWith<T,$Res>  {
   factory $RecordsListResponseCopyWith(RecordsListResponse<T> value, $Res Function(RecordsListResponse<T>) _then) = _$RecordsListResponseCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: 'records') List<T>? records,@JsonKey(name: 'page') int? page,@JsonKey(name: 'offset') int? offset,@JsonKey(name: 'total') int? total,@JsonKey(name: 'next') int? next,@JsonKey(name: 'prev') int? prev
+ List<T>? records, int? page, int? offset, int? total, int? next, int? prev
 });
 
 
@@ -158,7 +158,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'records')  List<T>? records, @JsonKey(name: 'page')  int? page, @JsonKey(name: 'offset')  int? offset, @JsonKey(name: 'total')  int? total, @JsonKey(name: 'next')  int? next, @JsonKey(name: 'prev')  int? prev)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<T>? records,  int? page,  int? offset,  int? total,  int? next,  int? prev)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _RecordsListResponse() when $default != null:
 return $default(_that.records,_that.page,_that.offset,_that.total,_that.next,_that.prev);case _:
@@ -179,7 +179,7 @@ return $default(_that.records,_that.page,_that.offset,_that.total,_that.next,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'records')  List<T>? records, @JsonKey(name: 'page')  int? page, @JsonKey(name: 'offset')  int? offset, @JsonKey(name: 'total')  int? total, @JsonKey(name: 'next')  int? next, @JsonKey(name: 'prev')  int? prev)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<T>? records,  int? page,  int? offset,  int? total,  int? next,  int? prev)  $default,) {final _that = this;
 switch (_that) {
 case _RecordsListResponse():
 return $default(_that.records,_that.page,_that.offset,_that.total,_that.next,_that.prev);case _:
@@ -199,7 +199,7 @@ return $default(_that.records,_that.page,_that.offset,_that.total,_that.next,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'records')  List<T>? records, @JsonKey(name: 'page')  int? page, @JsonKey(name: 'offset')  int? offset, @JsonKey(name: 'total')  int? total, @JsonKey(name: 'next')  int? next, @JsonKey(name: 'prev')  int? prev)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<T>? records,  int? page,  int? offset,  int? total,  int? next,  int? prev)?  $default,) {final _that = this;
 switch (_that) {
 case _RecordsListResponse() when $default != null:
 return $default(_that.records,_that.page,_that.offset,_that.total,_that.next,_that.prev);case _:
@@ -214,11 +214,11 @@ return $default(_that.records,_that.page,_that.offset,_that.total,_that.next,_th
 @JsonSerializable(genericArgumentFactories: true)
 
 class _RecordsListResponse<T> implements RecordsListResponse<T> {
-  const _RecordsListResponse({@JsonKey(name: 'records') final  List<T>? records, @JsonKey(name: 'page') this.page, @JsonKey(name: 'offset') this.offset, @JsonKey(name: 'total') this.total, @JsonKey(name: 'next') this.next, @JsonKey(name: 'prev') this.prev}): _records = records;
+  const _RecordsListResponse({final  List<T>? records, this.page, this.offset, this.total, this.next, this.prev}): _records = records;
   factory _RecordsListResponse.fromJson(Map<String, dynamic> json,T Function(Object?) fromJsonT) => _$RecordsListResponseFromJson(json,fromJsonT);
 
  final  List<T>? _records;
-@override@JsonKey(name: 'records') List<T>? get records {
+@override List<T>? get records {
   final value = _records;
   if (value == null) return null;
   if (_records is EqualUnmodifiableListView) return _records;
@@ -226,11 +226,11 @@ class _RecordsListResponse<T> implements RecordsListResponse<T> {
   return EqualUnmodifiableListView(value);
 }
 
-@override@JsonKey(name: 'page') final  int? page;
-@override@JsonKey(name: 'offset') final  int? offset;
-@override@JsonKey(name: 'total') final  int? total;
-@override@JsonKey(name: 'next') final  int? next;
-@override@JsonKey(name: 'prev') final  int? prev;
+@override final  int? page;
+@override final  int? offset;
+@override final  int? total;
+@override final  int? next;
+@override final  int? prev;
 
 /// Create a copy of RecordsListResponse
 /// with the given fields replaced by the non-null parameter values.
@@ -265,7 +265,7 @@ abstract mixin class _$RecordsListResponseCopyWith<T,$Res> implements $RecordsLi
   factory _$RecordsListResponseCopyWith(_RecordsListResponse<T> value, $Res Function(_RecordsListResponse<T>) _then) = __$RecordsListResponseCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: 'records') List<T>? records,@JsonKey(name: 'page') int? page,@JsonKey(name: 'offset') int? offset,@JsonKey(name: 'total') int? total,@JsonKey(name: 'next') int? next,@JsonKey(name: 'prev') int? prev
+ List<T>? records, int? page, int? offset, int? total, int? next, int? prev
 });
 
 

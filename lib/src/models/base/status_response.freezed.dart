@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$StatusResponse {
 
-@JsonKey(name: "success") bool? get success;@JsonKey(name: "code") String? get code;@JsonKey(name: "message") String? get message;@JsonKey(name: "timestamp") DateTime? get timestamp;@JsonKey(name: "subErrors") dynamic get subErrors;
+ bool? get success; String? get code; String? get message; DateTime? get timestamp; dynamic get subErrors;
 /// Create a copy of StatusResponse
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $StatusResponseCopyWith<$Res>  {
   factory $StatusResponseCopyWith(StatusResponse value, $Res Function(StatusResponse) _then) = _$StatusResponseCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: "success") bool? success,@JsonKey(name: "code") String? code,@JsonKey(name: "message") String? message,@JsonKey(name: "timestamp") DateTime? timestamp,@JsonKey(name: "subErrors") dynamic subErrors
+ bool? success, String? code, String? message, DateTime? timestamp, dynamic subErrors
 });
 
 
@@ -157,7 +157,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: "success")  bool? success, @JsonKey(name: "code")  String? code, @JsonKey(name: "message")  String? message, @JsonKey(name: "timestamp")  DateTime? timestamp, @JsonKey(name: "subErrors")  dynamic subErrors)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool? success,  String? code,  String? message,  DateTime? timestamp,  dynamic subErrors)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _StatusResponse() when $default != null:
 return $default(_that.success,_that.code,_that.message,_that.timestamp,_that.subErrors);case _:
@@ -178,7 +178,7 @@ return $default(_that.success,_that.code,_that.message,_that.timestamp,_that.sub
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: "success")  bool? success, @JsonKey(name: "code")  String? code, @JsonKey(name: "message")  String? message, @JsonKey(name: "timestamp")  DateTime? timestamp, @JsonKey(name: "subErrors")  dynamic subErrors)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool? success,  String? code,  String? message,  DateTime? timestamp,  dynamic subErrors)  $default,) {final _that = this;
 switch (_that) {
 case _StatusResponse():
 return $default(_that.success,_that.code,_that.message,_that.timestamp,_that.subErrors);case _:
@@ -198,7 +198,7 @@ return $default(_that.success,_that.code,_that.message,_that.timestamp,_that.sub
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: "success")  bool? success, @JsonKey(name: "code")  String? code, @JsonKey(name: "message")  String? message, @JsonKey(name: "timestamp")  DateTime? timestamp, @JsonKey(name: "subErrors")  dynamic subErrors)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool? success,  String? code,  String? message,  DateTime? timestamp,  dynamic subErrors)?  $default,) {final _that = this;
 switch (_that) {
 case _StatusResponse() when $default != null:
 return $default(_that.success,_that.code,_that.message,_that.timestamp,_that.subErrors);case _:
@@ -213,14 +213,14 @@ return $default(_that.success,_that.code,_that.message,_that.timestamp,_that.sub
 @JsonSerializable()
 
 class _StatusResponse implements StatusResponse {
-  const _StatusResponse({@JsonKey(name: "success") this.success, @JsonKey(name: "code") this.code, @JsonKey(name: "message") this.message, @JsonKey(name: "timestamp") this.timestamp, @JsonKey(name: "subErrors") this.subErrors});
+  const _StatusResponse({this.success, this.code, this.message, this.timestamp, this.subErrors});
   factory _StatusResponse.fromJson(Map<String, dynamic> json) => _$StatusResponseFromJson(json);
 
-@override@JsonKey(name: "success") final  bool? success;
-@override@JsonKey(name: "code") final  String? code;
-@override@JsonKey(name: "message") final  String? message;
-@override@JsonKey(name: "timestamp") final  DateTime? timestamp;
-@override@JsonKey(name: "subErrors") final  dynamic subErrors;
+@override final  bool? success;
+@override final  String? code;
+@override final  String? message;
+@override final  DateTime? timestamp;
+@override final  dynamic subErrors;
 
 /// Create a copy of StatusResponse
 /// with the given fields replaced by the non-null parameter values.
@@ -255,7 +255,7 @@ abstract mixin class _$StatusResponseCopyWith<$Res> implements $StatusResponseCo
   factory _$StatusResponseCopyWith(_StatusResponse value, $Res Function(_StatusResponse) _then) = __$StatusResponseCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: "success") bool? success,@JsonKey(name: "code") String? code,@JsonKey(name: "message") String? message,@JsonKey(name: "timestamp") DateTime? timestamp,@JsonKey(name: "subErrors") dynamic subErrors
+ bool? success, String? code, String? message, DateTime? timestamp, dynamic subErrors
 });
 
 

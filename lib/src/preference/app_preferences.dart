@@ -10,7 +10,6 @@ class AppPreferences with LogMixin {
   }
 
   Future _initialData() async {
-    await EncryptedSharedPreferences.initialize('data_encrypted12');
     _encryptedSharedPreferences = EncryptedSharedPreferences.getInstance();
   }
 
@@ -104,5 +103,12 @@ class AppPreferences with LogMixin {
       SharedPreferenceKeys.refreshToken,
       token,
     );
+  }
+
+  Future<void> deleteToken() async {
+    await Future.wait([
+      _encryptedSharedPreferences.remove(SharedPreferenceKeys.accessToken),
+      _encryptedSharedPreferences.remove(SharedPreferenceKeys.refreshToken),
+    ]);
   }
 }

@@ -40,15 +40,17 @@ class RepositoryImpl implements Repository {
   }
 
   @override
-  Future<void> logout() async {
-    // await _appPreferences.clearCurrentUserData();
+  Future<void> saveToken({
+    required String accessToken,
+    required String refreshToken,
+  }) async {
+    _appPreferences.saveAccessToken(accessToken);
+    _appPreferences.saveRefreshToken(refreshToken);
   }
 
   @override
-  Future<void> clearCurrentUserData() {
-    return Future.value();
-
-    // _appPreferences.clearCurrentUserData();
+  Future<void> deleteAllToken() async {
+    await _appPreferences.deleteToken();
   }
 
   @override
@@ -61,15 +63,6 @@ class RepositoryImpl implements Repository {
   @override
   Future<bool> saveIsDarkMode(bool isDarkMode) async {
     return _appPreferences.saveIsDarkMode(isDarkMode);
-  }
-
-  @override
-  Future<void> saveAccessToken(String accessToken) =>
-      _appPreferences.saveAccessToken(accessToken);
-
-  @override
-  Future deleteAccount() async {
-    // await _appPreferences.clearCurrentUserData();
   }
 
   @override

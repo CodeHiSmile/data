@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:data/src/mapper/base/base_error_response_mapper.dart';
+import 'package:flutter/foundation.dart';
 import 'package:shared/shared.dart';
 import 'package:dio/dio.dart';
 
@@ -59,11 +60,18 @@ class DioExceptionMapper extends ExceptionMapper<RemoteException> {
             rootException: exception,
           );
         case DioExceptionType.unknown:
-          if (exception.error is SocketException) {
+          if (kIsWeb) {
             return RemoteException(
               kind: RemoteExceptionKind.network,
               rootException: exception,
             );
+          } else {
+            if (exception.error is SocketException) {
+              return RemoteException(
+                kind: RemoteExceptionKind.network,
+                rootException: exception,
+              );
+            }
           }
 
           if (exception.error is RemoteException) {

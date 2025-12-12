@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:shared/shared.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
@@ -47,6 +45,6 @@ class HeaderInterceptor extends BaseInterceptor {
   }
 
   String userAgentClientHintsHeader() {
-    return '${Platform.operatingSystem} - ${_appInfo.versionName}(${_appInfo.versionCode})';
+    return 'APP ${_appInfo.versionName}(${_appInfo.versionCode})';
   }
 }

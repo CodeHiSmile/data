@@ -27,19 +27,19 @@ dependencies:
   shared_preferences: ^2.5.3
   encrypt_shared_preferences: ^0.9.10
 
-  shared:
-    path: ../shared
-  domain:
-    path: ../domain
-
 #  shared:
-#    git:
-#      url: https://github.com/CodeHiSmile/shared
-#      ref: main
+#    path: ../shared
 #  domain:
-#    git:
-#      url: https://github.com/CodeHiSmile/domain
-#      ref: main
+#    path: ../domain
+
+  shared:
+    git:
+      url: https://github.com/CodeHiSmile/shared
+      ref: main
+  domain:
+    git:
+      url: https://github.com/CodeHiSmile/domain
+      ref: main
 
 dev_dependencies:
   flutter_test:

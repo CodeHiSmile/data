@@ -56,14 +56,14 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i467.ConnectivityInterceptor>(
       () => _i467.ConnectivityInterceptor(),
     );
+    gh.factory<_i706.HeaderInterceptor>(
+      () => _i706.HeaderInterceptor(gh<_i811.AppInfo>()),
+    );
     gh.lazySingleton<_i332.AppPreferences>(
       () => _i332.AppPreferences(gh<_i460.SharedPreferences>()),
     );
     gh.factory<_i1048.AccessTokenInterceptor>(
       () => _i1048.AccessTokenInterceptor(gh<_i332.AppPreferences>()),
-    );
-    gh.factory<_i706.HeaderInterceptor>(
-      () => _i706.HeaderInterceptor(gh<_i811.AppInfo>()),
     );
     gh.lazySingleton<_i494.Repository>(
       () => _i1013.RepositoryImpl(

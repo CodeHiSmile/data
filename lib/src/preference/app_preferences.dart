@@ -59,6 +59,13 @@ class AppPreferences with LogMixin {
     return token.isNotEmpty;
   }
 
+  String get username {
+    return _encryptedSharedPreferences.getString(
+          SharedPreferenceKeys.username,
+        ) ??
+        '';
+  }
+
   Future<bool> saveIsDarkMode(bool isDarkMode) {
     return _sharedPreference.setBool(
       SharedPreferenceKeys.isDarkMode,
@@ -110,5 +117,12 @@ class AppPreferences with LogMixin {
       _encryptedSharedPreferences.remove(SharedPreferenceKeys.accessToken),
       _encryptedSharedPreferences.remove(SharedPreferenceKeys.refreshToken),
     ]);
+  }
+
+  Future<void> saveUsername(String username) async {
+    await _encryptedSharedPreferences.setString(
+      SharedPreferenceKeys.username,
+      username,
+    );
   }
 }

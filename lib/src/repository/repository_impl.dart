@@ -30,6 +30,9 @@ class RepositoryImpl implements Repository {
       _languageCodeDataMapper.mapToEntity(_appPreferences.languageCode);
 
   @override
+  String get username => _appPreferences.username;
+
+  @override
   Future<bool> saveIsFirstLogin(bool isFirstLogin) {
     return _appPreferences.saveIsFirstLogin(isFirstLogin);
   }
@@ -75,4 +78,9 @@ class RepositoryImpl implements Repository {
 
   @override
   bool get isFirstSurvey => false;
+
+  @override
+  Future<void> saveUsername(String username) async {
+    await _appPreferences.saveUsername(username);
+  }
 }
